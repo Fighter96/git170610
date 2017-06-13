@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/echarts-all.js"></script>
+	</head>
+	<body>
+		<div id="box" style="width: 800px;height: 600px;"></div>
+	</body>
+	<script>
+		var oChart=echarts.init(document.getElementById("box"));
+		
+		var op={
+			tooltip:{
+				show:true
+			},
+			legend:{
+				data:["数量"]
+			},
+			xAxis:[{
+				data:["动画","发给","的","第三个"]
+			}],
+			yAxis:[{
+				type:'value'
+			}],
+			series:[{
+				"name":'价格',
+				"type":"line",
+				"data":[1,5,6,7]
+			}]
+		};
+		oChart.setOption(op);
+	</script>
+</html>
